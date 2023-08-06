@@ -1,0 +1,69 @@
+<%- include('parts/top.ejs')%>
+    <br>
+    <br>
+    <br>
+ <div class="gradupdate">
+    <div class="container containeraddup ">
+        <div style="margin-left: 200px;"> <h3 class="newstyletitleaddbook">Welcome to update your Book</h3></div>
+        <br><br>
+        <div class="row mx-0 ">
+            <div class="col-lg-6 px-0" >
+        <form method="POST" action="/mybooks/update" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>Book Title</label>
+                <input type="text" class="form-control" name="title" value="<%=bookUpdate.title%>">
+            </div>
+            <div class="form-group">
+                <label>Author</label>
+                <input type="text" class="form-control" name="author" value="<%=bookUpdate.author%>">
+            </div>
+            <div class="form-group">
+                <label>Price</label>
+                <input type="number" class="form-control" name="price" value="<%=bookUpdate.price%>">
+            </div>
+            <div class="form-group">
+                <label>Description</label>
+                <textarea type="text" class="form-control" name="description" value="<%= bookUpdate.description %>"> 
+               <%= bookUpdate.description%>
+            </textarea>
+            </div>
+
+        </div>
+            <div class="col-lg-6 px-0" >
+             <br><br>
+                <input type="hidden" name="bookId" value="<%= bookUpdate._id %>">
+                <img src="/upload/<%=bookUpdate.image%>" width="100" height="100">
+
+                <input type="hidden" name="oldImage" value="<%= bookUpdate.image%>">
+                <div class="form-group">
+                    <label>Cover</label>
+                    <input type="file" name="image" class="form-control">
+                </div>
+            
+
+            <% if (Smessage) {%>
+                <div class="alert alert-success">
+                    <%= Smessage %>
+
+                </div>
+
+                <% } %>
+                    <% if (Emessage) {%>
+                        <div class="alert alert-danger">
+                            <%= Emessage %>
+
+                        </div>
+
+                        <% } %>
+                        <br>
+                            <button class="filled-button-addbook">Update Book</button>
+                        </div>
+        </form>
+    </div>
+</div>
+    </div></div>
+
+
+
+
+    <%- include('parts/bottom.ejs')%>

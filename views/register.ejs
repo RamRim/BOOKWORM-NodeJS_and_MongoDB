@@ -1,0 +1,72 @@
+<%- include('parts/top.ejs')%>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container ">
+  <h1 class="newstyletitle">Welcome to Bookworm </h1>
+  <div class="row mx-0">
+   
+    <div class="col-lg-6 px-0" style="margin-top: 50px;">
+    <form method="POST" action="/register" >
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+            <input type="text" id="form1Example1" name="name" class="form-control" placeholder="Name"/>
+      
+        </div>
+
+
+        <div class="form-outline mb-4">
+          <input type="email" id="form1Example1" name="email" class="form-control" placeholder="Email"/>
+    
+        </div>
+      
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <input type="password" id="form1Example2" name="password" class="form-control" placeholder="Password" />
+        </div>
+      
+        <!-- 2 column grid layout for inline styling -->
+        <% if(message){ %>
+          <div class="alert alert-danger">
+            <%= message %>
+          </div>
+  
+          <% } %>
+       
+      
+        <!-- Submit button -->
+        <button class="filled-button-logout">Register</button>
+      </form>
+      <br><br><br>
+      <div>
+        <a class="text-body px-3" href="">
+            <i class="fa fa-facebook-f"></i>
+        </a>
+        <a class="text-body px-3" href="">
+            <i class="fa fa-twitter"></i>
+        </a>
+
+        <a class="text-body px-3" href="">
+            <i class="fa fa-instagram"></i>
+        </a>
+        <a class="text-body pl-3" href="">
+            <i class="fa fa-youtube" ></i>
+        </a>
+    </div>
+    </div>
+    <div class="col-lg-6 px-12">
+      <div class="rowdetails">
+        <div class="gradlogin">
+        <h5 class="newstyletitle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore unde suscipit, voluptatibus soluta aperiam corrupti neque. Sint eos numquam odio voluptas qui distinctio ea ut. Quos tenetur officiis ratione hic.</h5>
+      </div></div>
+  </div>
+  </div>
+
+</div>
+
+
+<%- include('parts/bottom.ejs')%>

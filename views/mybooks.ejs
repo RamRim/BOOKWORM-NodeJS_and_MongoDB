@@ -1,0 +1,43 @@
+<%- include('parts/top.ejs')%>
+    <br>
+    <br>
+    <br>
+    <div class="gradupdate">
+    <div class="container containermybook">
+        <div style="margin-left: 200px;"> <h3 class="newstyletitleaddbook">Welcome to update or delete your Book</h3></div>
+        <br><br>
+        <table class="table" >
+            <thead>
+                <tr>
+                    <th scope="col">Cover</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (let book of mybooks) {%>
+                    <tr>
+                        <th><img width="50" height="50" src="/upload/<%= book.image%>"></th>
+                        <td>
+                            <%= book.title %>
+                        </td>
+                        <td>
+                            <%= book.author %>
+                        </td>
+                        <td>$
+                            <%= book.price %>
+                        </td>
+                        <td><a href="/mybooks/delete/<%=book._id%>" class="filled-button-delete">Delete</a>
+
+                            <a href="/mybooks/update/<%=book._id%>" class="filled-button-update">Update</a></td>
+                    </tr>
+                    <% } %>
+            </tbody>
+        </table>
+
+    </div>
+    </div>
+
+    <%- include('parts/bottom.ejs')%>

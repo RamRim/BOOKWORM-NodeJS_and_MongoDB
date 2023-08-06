@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <title>Bookworm</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/fontawesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/templatemo-sixteen.css">
+    <link rel="stylesheet" href="/css/owl.css">
+
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+    <header class="">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container">
+                <a class="navbar-brand">
+                    <h2 style="color: #f6e5d9">Bookworm</h2>
+
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+
+
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+                        </li>
+                        <%if(verifUser) {%>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/books">All Books</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/addbook">Add Book</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/mybooks">My Books</a>
+                            </li>
+                            <% } else{ %>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/login">Login</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/register">Register</a>
+                                </li>
+                                <% } %>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/dashboard" target="_blank">Profile</a>
+                                    </li>
+
+
+                                    <li>
+                                        <% if(verifUser){ %>
+                                            <form class="form-inline my-2 my-lg-0" method="POST" action="/logout">
+                                                <button class="filled-button-logout" >Logout</button>
+                                            </form>
+
+                                            <% } %>
+                                    </li>
+
+
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
