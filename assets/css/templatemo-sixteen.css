@@ -344,12 +344,51 @@ h5.newstyletitle{
 .containeraddup{
     margin-left: 150px;
     padding: 70px;
-
+}
+.containeraddup1{
+    margin-left: 200px;
 }
 .containermybook{
     margin-left: 80px;
     padding: 70px;
-
+}
+.upbook{
+    height: 350px ;
+    width: 350px;
+}
+.upbooks{
+    height: 300px;
+}
+.pricebook{
+    color: #c26d2d;
+}
+.rounded-circle{
+    max-width: 60px
+}
+.progress{
+    height: 12px;
+}
+.input-group-append{background-color: #b3937c;}
+.stars a{
+    color:#b3937c;
+}
+.reg{
+    margin-top: 50px;
+}
+.bg-danger{
+    width: 75%
+}
+.bg-success{
+    width: 50%
+}
+.bg-warning{
+    width: 30%
+}
+.mycopy{
+    color: #b3937c;
+}
+.BookWorm{
+    color: #f6e5d9
 }
 .gradupdate{
   height: 600px;
